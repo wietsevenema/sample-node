@@ -1,0 +1,9 @@
+FROM docker.io/library/node:14 AS build
+
+COPY * /app/
+
+WORKDIR /app
+ENTRYPOINT [ "node", "server.js" ]
+
+RUN npm install
+
